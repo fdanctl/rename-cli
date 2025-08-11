@@ -51,17 +51,12 @@ rename-cli replace -n 1 'old_pattern' 'new_pattern_%0n' \*.txt
 
 #### Flags
 
-| Flag              | Description                                       | Default |
-| ----------------- | ------------------------------------------------- | ------- |
-| `-n` or `--start` | Starting value for %n numbering                   | `1`     |
-| `--dry-run`       | Show what would be renamed without making changes | `1`     |
+| Flag              | Description                                       |
+| ----------------- | ------------------------------------------------- |
+| `-n` or `--start` | Starting value for %n numbering (default: `1`)    |
+| `--dry-run`       | Show what would be renamed without making changes |
 
 ### Explanation of % Placeholders
-
-The % syntax allows dynamic replacements in the replacement string:
-
-Numbering: `%n` → Sequential number (e.g., `%0n` → 01, `%n` → 1). Leading zeros can be specified with `%0n`, `%00n`, `%000n`, etc.
-Date/Time: Use `%YYYY`, `%MM`, `%DD`, etc., to insert current date/time values. These are replaced with the current system time when the command runs. This makes the command flexible for batch renaming, versioning, or timestamping files.
 
 | Placeholder              | Description                                                   | Example              |
 | ------------------------ | ------------------------------------------------------------- | -------------------- |
@@ -69,7 +64,7 @@ Date/Time: Use `%YYYY`, `%MM`, `%DD`, etc., to insert current date/time values. 
 | `%YYYY`                  | Four-digit year                                               | Current year: `2025` |
 | `%YY`                    | Two-digit year                                                | Current year: `25`   |
 | `%MM`                    | Two-digit month                                               | Current month: `08`  |
-| `%DD `                   | Two-digit day                                                 | Current day: `11`    |
-| `%hh `                   | Two-digit hour                                                | Current hour: `21`   |
-| `%mm `                   | Two-digit minute                                              | Current minute: `45` |
-| `%ss `                   | Two-digit second                                              | Current second: `30` |
+| `%DD`                    | Two-digit day                                                 | Current day: `11`    |
+| `%hh`                    | Two-digit hour                                                | Current hour: `21`   |
+| `%mm`                    | Two-digit minute                                              | Current minute: `45` |
+| `%ss`                    | Two-digit second                                              | Current second: `30` |
