@@ -1,4 +1,4 @@
-module rename-cli
+module github.com/fdanctl/rename-cli
 
 go 1.24.5
 

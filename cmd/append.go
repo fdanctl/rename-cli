@@ -7,7 +7,8 @@ import (
 	"fmt"
 	"os"
 	"regexp"
-	"rename-cli/internal/renamer"
+
+	"github.com/fdanctl/rename-cli/internal/renamer"
 
 	"github.com/spf13/cobra"
 )

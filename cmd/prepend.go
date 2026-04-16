@@ -6,7 +6,8 @@ package cmd
 import (
 	"fmt"
 	"os"
-	"rename-cli/internal/renamer"
+
+	"github.com/fdanctl/rename-cli/internal/renamer"
 
 	"github.com/spf13/cobra"
 )
@@ -69,7 +70,6 @@ Explanation of % Placeholders:
 				os.Rename(file, replaced)
 			}
 		}
-
 	},
 }
 
